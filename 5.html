@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Palace Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .menu-section {
+            margin-bottom: 30px;
+        }
+
+        .menu-section h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item .name {
+            font-size: 1.2rem;
+            color: #34495e;
+        }
+
+        .menu-item .price {
+            font-size: 1.2rem;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .menu-item .description {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .menu-item .add-to-cart {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .menu-item .add-to-cart:hover {
+            background: #c0392b;
+        }
+
+        .cart {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: #34495e;
+        }
+
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item .item-name {
+            font-size: 1.2rem;
+            color: #34495e;
+        }
+
+        .cart-item .item-price {
+            font-size: 1.2rem;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .cart .empty {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            text-align: right;
+        }
+
+        .cart-total span {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .cart .buy-now {
+            display: block;
+            width: 100%;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .cart .buy-now:hover {
+            background: #1e8449;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-title">Pizza Shop Menu</div>
+
+        <div class="menu-section">
+            <h2>Classic Pizzas</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Margherita</div>
+                    <div class="description">Classic pizza with tomato, mozzarella, and basil.</div>
+                </div>
+                <div class="price">$8.99</div>
+                <button class="add-to-cart" data-name="Margherita" data-price="8.99">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Pepperoni</div>
+                    <div class="description">Pepperoni, mozzarella, and tomato sauce.</div>
+                </div>
+                <div class="price">$9.99</div>
+                <button class="add-to-cart" data-name="Pepperoni" data-price="9.99">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Veggie</div>
+                    <div class="description">Bell peppers, onions, mushrooms, and olives.</div>
+                </div>
+                <div class="price">$10.99</div>
+                <button class="add-to-cart" data-name="Veggie" data-price="10.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Specialty Pizzas</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="name">BBQ Chicken</div>
+                    <div class="description">Grilled chicken, BBQ sauce, and red onions.</div>
+                </div>
+                <div class="price">$12.99</div>
+                <button class="add-to-cart" data-name="BBQ Chicken" data-price="12.99">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Hawaiian</div>
+                    <div class="description">Ham, pineapple, and mozzarella cheese.</div>
+                </div>
+                <div class="price">$11.99</div>
+                <button class="add-to-cart" data-name="Hawaiian" data-price="11.99">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Meat Lovers</div>
+                    <div class="description">Pepperoni, sausage, ham, and bacon.</div>
+                </div>
+                <div class="price">$13.99</div>
+                <button class="add-to-cart" data-name="Meat Lovers" data-price="13.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Sides</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Garlic Bread</div>
+                    <div class="description">Toasted bread with garlic butter.</div>
+                </div>
+                <div class="price">$3.99</div>
+                <button class="add-to-cart" data-name="Garlic Bread" data-price="3.99">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Cheesy Sticks</div>
+                    <div class="description">Mozzarella sticks with marinara sauce.</div>
+                </div>
+                <div class="price">$5.99</div>
+                <button class="add-to-cart" data-name="Cheesy Sticks" data-price="5.99">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="name">Buffalo Wings</div>
+                    <div class="description">Spicy wings served with blue cheese dip.</div>
+                </div>
+                <div class="price">$7.99</div>
+                <button class="add-to-cart" data-name="Buffalo Wings" data-price="7.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h3>Cart</h3>
+            <ul class="cart-items">
+                <li class="empty">Your cart is empty</li>
+            </ul>
+            <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+            <button class="buy-now">Buy Now</button>
+        </div>
+    </div>
+
+    <script>
+        const cartItems = document.querySelector('.cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const buyNowButton = document.querySelector('.buy-now');
+        let totalAmount = 0;
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const itemName = button.getAttribute('data-name');
+                const itemPrice = parseFloat(button.getAttribute('data-price'));
+
+                const emptyMessage = cartItems.querySelector('.empty');
+                if (emptyMessage) emptyMessage.remove();
+
+                const cartItem = document.createElement('li');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <span class="item-name">${itemName}</span>
+                    <span class="item-price">$${itemPrice.toFixed(2)}</span>
+                `;
+                cartItems.appendChild(cartItem);
+
+                totalAmount += itemPrice;
+                cartTotal.textContent = totalAmount.toFixed(2);
+            });
+        });
+
+        buyNowButton.addEventListener('click', () => {
+            const emptyMessage = cartItems.querySelector('.empty');
+            if (emptyMessage) {
+                alert('Your cart is empty');
+            } else {
+                alert('Thank you for your purchase!');
+            }
+        });
+    </script>
+</body>
+</html>

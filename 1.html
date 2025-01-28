@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperLocal Delivery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c, #42aaff);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            padding: 5% 10%;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            animation: fadeIn 3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff7eb3;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .images {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .images img {
+            width: 150px;
+            height: 150px;
+            border-radius: 20%;
+            border: 5px solid white;
+            transition: transform 0.5s;
+        }
+
+        .images img:hover {
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">HyperLocal Delivery</div>
+        <div class="subtitle">Fresh food delivered to your door in no time!</div>
+        <button class="cta-button"><a href="2.html">Order Now</button></a>
+        <div class="images">
+            <img src="https://cdn.shopify.com/s/files/1/0668/7932/4458/collections/Fresh_Vegetable.jpg?v=1703309251" alt="Fresh Vegetables">
+            <img src="https://www.gifts-to-india.com/images/FFHNUUN105_big.webp" alt="Fruit Basket">
+            <img src="https://media.istockphoto.com/id/1081422898/photo/pan-fried-duck.jpg?s=612x612&w=0&k=20&c=kzlrX7KJivvufQx9mLd-gMiMHR6lC2cgX009k9XO6VA=" alt="Gourmet Meal">
+            <img src="https://i.pinimg.com/736x/96/21/e6/9621e61a4658242cda917b9631883a8a.jpg" alt="Desserts">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmrVyLmaUXJyc4aDTSFlqzdIUlgSNB92_HbQ&s" alt="Beverages">
+            <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2022-03-KESS-snacks%2F230228_ATKitchn_KESS-snacks-23_1838" alt="Snacks">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/053/406/non_2x/combo-offer-banner-template-megaphone-icon-illustration-flat-design-vector.jpg" alt="Special Combos">
+            <img src="D:\programs\int\Mixsoon Skincare.jpeg" alt="Daily Essentials">
+        </div>
+        <footer>
+            &copy; 2024 HyperLocal Delivery. All Rights Reserved.
+        </footer>
+    </div>
+</body>
+</html>

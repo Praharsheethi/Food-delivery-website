@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .header { background-color: #77aee2; color: white; padding: 10px; text-align: center; }
+        .restaurant-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .restaurant { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .restaurant img { max-width: 100%; height: 200px; object-fit: cover; }
+        .button { background-color: #ff6f61; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; margin: 10px 0; }
+        .button:hover { background-color: #e65a50; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HyperLocal Delivery</h1>
+        <p>Your favorite meals, delivered fast!</p>
+    </div>
+    <div id="restaurants" class="restaurant-grid"></div>
+    <script>
+        const restaurants = [
+            { id: 1, name: "Pizza Palace", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/250px-Pizza-3007395.jpg", description: "Delicious pizzas" },
+            { id: 2, name: "Sushi Spot", image: "https://static.blog.bolt.eu/LIVE/wp-content/uploads/2024/05/10110345/different-types-of-sushi-1024x536.jpg", description: "Fresh sushi rolls" },
+            { id: 3, name: "Burger Haven", image: "https://www.shutterstock.com/image-photo/burger-tomateoes-lettuce-pickles-on-600nw-2309539129.jpg", description: "Juicy gourmet burgers" },
+            { id: 4, name: "Taco Town", image: "https://images6.alphacoders.com/133/1334073.png", description: "Authentic Mexican tacos" },
+            { id: 5, name: "Pasta Paradise", image: "https://i.ytimg.com/vi/iQ38VKAjQgo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBYeSca3xOzPVWec6G-I6XqaZ8z4Q", description: "Italian pasta favorites" },
+            { id: 6, name: "Grill & Thrill", image: "https://www.mashed.com/img/gallery/heres-the-difference-between-grilled-and-tandoori-chicken/l-intro-1607603831.jpg", description: "Steaks and BBQ" },
+            { id: 7, name: "Salad Shack", image: "https://www.foodandwine.com/thmb/IuZPWAXBp4YaT9hn1YLHhuijT3k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-big-italian-salad-hero-83e6ea846722478f8feb1eea33158b00.jpg", description: "Healthy and fresh salads" },
+            { id: 8, name: "Dessert Delight", image: "https://media.istockphoto.com/id/497959594/photo/fresh-cakes.jpg?s=612x612&w=0&k=20&c=T1vp7QPbg6BY3GE-qwg-i_SqVpstyHBMIwnGakdTTek=", description: "Cakes, ice creams, and more" },
+        ];
+        const container = document.getElementById('restaurants');
+        restaurants.forEach(res => {
+            const div = document.createElement('div');
+            div.className = 'restaurant';
+            div.innerHTML = `
+                <img src="${res.image}" alt="${res.name}">
+                <h2>${res.name}</h2>
+                <p>${res.description}</p>
+                <button class="button" onclick="order(${res.id})">Order Now</button>
+            `;
+            container.appendChild(div);
+        });
+        function order(id) {
+            const selectedRestaurant = restaurants.find(res => res.id === id);
+            alert(`You selected: ${selectedRestaurant.name}`);
+        }
+    </script>
+</body>
+</html>

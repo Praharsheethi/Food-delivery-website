@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperLocal Delivery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: #ea7d75; /* Classic Deep Red */
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .main-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #77aee2; /* Dark Blue */
+            color: white;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        .main-section .text {
+            flex: 1;
+            text-align: left;
+            padding-right: 30px;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .main-section .text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #f6f5f4; /* Classic Gold */
+            animation: bounceIn 1s ease;
+        }
+
+        .main-section .text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .button {
+            background-color: #ff6f61; /* Classic Gold */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #f1c40f;
+            transform: translateY(-5px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px 20px;
+            background-color: #fff; 
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .feature-card {
+            background-color: #ecf0f1; /* Light Grey */
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            animation: rotateIn 1.5s ease-in-out;
+        }
+
+        .footer {
+            background-color: #2980b9; /* Dark Blue */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes rotateIn {
+            0% { transform: rotate(0deg); opacity: 0; }
+            100% { transform: rotate(360deg); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>HyperLocal Delivery</h1>
+        <p>Your Favorite Meals Delivered Fast and Fresh</p>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="text">
+            <h1>Why Choose Us?</h1>
+            <p>We bring the best local restaurants to your doorstep with lightning-fast delivery and a wide variety of options to satisfy your cravings.</p>
+            <a href="#features" class="button">Explore Our Features</a>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLD9PeYHp16iLBgO6yMYkUpMTNlZo-P2Y0pA&s" alt="Delivery Image" style="width: 100%; border-radius: 10px;">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="feature-card">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/023/091/583/small_2x/fast-delivery-icon-with-a-watch-or-timer-icon-fast-delivery-express-and-urgent-shipping-services-chronometer-sign-fast-delivery-logo-free-vector.jpg" alt="Fast Delivery">
+            <h3>Fast Delivery</h3>
+            <p>Get your meals within minutes, hot and fresh!</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAK2INjTYhYO7pD0dwQqGcQQdD47FL3SHlYQ&s" alt="Variety of Options">
+            <h3>Variety of Options</h3>
+            <p>Choose from a wide range of local restaurants.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://i.pinimg.com/originals/73/c1/3b/73c13be33940ef97548863c982bcac99.jpg" alt="Easy Payment">
+            <h3>Easy Payment</h3>
+            <p>Pay securely using your preferred payment method.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 HyperLocal Delivery. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
